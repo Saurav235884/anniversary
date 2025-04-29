@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Anniversary</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/final.css" />
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+    <!-- Vanilla Tilt for Hover 3D Effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  </head>
+  <body>
+    <audio
+      id="anniversary-audio"
+      src="audio/anniversary-song.mp3"
+      style="display: none"
+    ></audio>
+    <div style="position: fixed; top: 80%; right: 20px; z-index: 9999">
+      <button id="play-audio-btn" class="btn btn-custom">Play Music 🎵</button>
+    </div>
+
+    <!-- Particles.js and Confetti Canvas -->
+    <div id="particles-js"></div>
+    <canvas id="confetti-canvas"></canvas>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand text-white font-weight-bold"
+          style="font-size: 1.5rem"
+          href="#"
+          >Anniversary</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item" style="margin-left: 1rem">
+              <a class="nav-link text-white" href="#about">About</a>
+            </li>
+            <li class="nav-item" style="margin-left: 1rem">
+              <a class="nav-link text-white" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item" style="margin-left: 1rem">
+              <a class="nav-link text-white" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+      <div>
+        <div class="d-flex justify-content-around">
+          <img
+            src="images/fav1.png"
+            alt="ananya"
+            width="100"
+            class="heart-img"
+          />
+          <img
+            src="images/fav2.png"
+            alt="ananya"
+            width="100"
+            class="heart-img"
+          />
+        </div>
+        <h1>Happy Anniversary ❤️</h1>
+        <p class="lead mt-3">Celebrating our beautiful journey together</p>
+        <button class="button btn btn-custom mt-4">Click Me 💖</button>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="text-center">
+      <div class="container">
+        <h2 class="mb-4 font-weight-bold">Our Story</h2>
+        <p class="lead">
+          Two souls with a single thought, two hearts that beat as one. <br />
+          Thank you for standing beside me through thick and thin. Here's to our
+          forever. 💖
+        </p>
+      </div>
+    </section>
+    <section id="journey" class="bg-light py-5">
+      <div class="container">
+        <h3 class="text-center mb-5 font-weight-bold " style="color: #cf0000;">Our Journey</h3>
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h5>First Meeting</h5>
+              <p>
+                It all began with a smile and a simple hello. That moment
+                changed everything.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h5>Our First Date</h5>
+              <p>
+                A beautiful evening full of laughter, stories, and butterflies
+                in the stomach.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h5>Trips & Adventures</h5>
+              <p>
+                Exploring the world together, one step at a time — creating
+                memories that last forever.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h5>Proposal Day</h5>
+              <p>
+                One question, a thousand emotions, and a lifetime promise — you
+                said yes!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section
+      id="gallery"
+      class="text-center slider3d"
+      style="background-color: #f0f0f0"
+    >
+      <div class="container">
+        <h2 class="text-dark mb-4">Memories</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="images/img23.jpg"
+                style="object-fit: contain"
+                class="img-fluid"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/img234.jpg"
+                style="object-fit: contain"
+                class="img-fluid"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/images.jpg"
+                style="object-fit: contain"
+                class="img-fluid"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/img23.jpg"
+                style="object-fit: contain"
+                class="img-fluid"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/img234.jpg"
+                style="object-fit: contain"
+                class="img-fluid"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/images.jpg"
+                style="object-fit: contain"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <!-- Optional Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section class="countdown d-flex justify-content-center">
+      <div class="m-auto">
+        <div>Party starts in:</div>
+        <div
+          id="countdown-timer"
+          class="countdown"
+          style="padding-left: 1.5rem"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-center bg-light">
+      <div class="container">
+        <h2 class="mb-4" style="color: #cf0000;">Send Love</h2>
+        <p class="lead" style="color: #cf0000;">
+          Drop a message on whatsapp to celebrate this special day with us!
+        </p>
+        <a
+          href="https://api.whatsapp.com/send?phone=<8178991027>&text=Happy Anniversary💖"
+          target="_blank"
+          class="btn btn-custom mt-3"
+          >Send Whatsapp Message</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Made with ❤️</p>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          const navbarCollapse = document.querySelector(".navbar-collapse");
+          if (navbarCollapse.classList.contains("show")) {
+            new bootstrap.Collapse(navbarCollapse).hide();
+          }
+        });
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        loop: true,
+        effect: "coverflow",
+        spaceBetween: 30,
+        centeredSlides: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+      // Particles.js Init
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: ["#ffffff", "#ffd700", "#ff69b4", "#00ffff", "#ff6347"],
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+          },
+          size: {
+            value: 5,
+            random: true,
+          },
+          line_linked: {
+            enable: false,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            out_mode: "out",
+          },
+        },
+        interactivity: {
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse",
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+
+    <script>
+      // Countdown Timer
+      function startCountdown() {
+        const endDate = new Date("2025-04-28T00:00:00");
+        const countdown = document.getElementById("countdown-timer");
+        setInterval(function () {
+          const now = new Date();
+          const remainingTime = endDate - now;
+          const hours = Math.floor(remainingTime / (1000 * 60 * 60)) % 24;
+          const minutes = Math.floor(remainingTime / (1000 * 60)) % 60;
+          const seconds = Math.floor(remainingTime / 1000) % 60;
+          countdown.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+        }, 1000);
+      }
+      startCountdown();
+
+      // VanillaTilt Init
+      VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        max: 25,
+        speed: 400,
+      });
+
+      // Confetti Auto Fall
+      function shootConfetti() {
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: [
+            "#ff0a54",
+            "#ff477e",
+            "#ff7096",
+            "#ff85a1",
+            "#fbb1bd",
+            "#f9bec7",
+          ],
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: [
+            "#ff0a54",
+            "#ff477e",
+            "#ff7096",
+            "#ff85a1",
+            "#fbb1bd",
+            "#f9bec7",
+          ],
+        });
+      }
+      setInterval(shootConfetti, 500);
+
+      // Button Blast Confetti
+      document.querySelector(".button").addEventListener("click", function () {
+        confetti({
+          particleCount: 200,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
+      });
+
+    </script>
+
+    <script>
+      const audio = document.getElementById("anniversary-audio");
+      const playButton = document.getElementById("play-audio-btn");
+
+      // Yahan apne gaane ke link ya file daalo
+      const songs = ["audio/song1.mp3", "audio/song2.mp3", "audio/song3.mp3"];
+
+      playButton.addEventListener("click", () => {
+        // Random ek song select karo
+        const randomIndex = Math.floor(Math.random() * songs.length);
+        audio.src = songs[randomIndex];
+        audio.play();
+      });
+    </script>
+  </body>
+</html>
